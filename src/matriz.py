@@ -1,7 +1,9 @@
 class Matriz:
     def __init__(self) -> None:
 
-        self.__matriz = [[' ' for _ in range(3)] for _ in range(3)]
+        self.__matriz = [[' ', ' ', ' '],
+                         [' ', ' ', ' '],
+                         [' ', ' ', ' ']]
 
     def __str__(self) -> str:
         """ Retorna um valor string da instância da classe quando utilizado o metodo str() ou print()
@@ -33,7 +35,7 @@ class Matriz:
     def __imprimir(self) -> str:
         """ Retorna uma lista de strings convertida em uma string
 
-        Função que junta os elementos da matriz em uma grade de jogo da velha
+        Metodo que junta os elementos da matriz em uma grade de jogo da velha
         """
 
         grade = [
@@ -42,8 +44,8 @@ class Matriz:
             f' {self.__matriz[1][0]} | {self.__matriz[1][1]} | {self.__matriz[1][2]} \n',
             '---+---+---\n',
             f' {self.__matriz[2][0]} | {self.__matriz[2][1]} | {self.__matriz[2][2]} \n'
-        ]
 
+        ]
         return ''.join(grade)
 
 
