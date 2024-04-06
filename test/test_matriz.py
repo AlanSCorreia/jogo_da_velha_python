@@ -2,7 +2,7 @@ import unittest
 from src.matriz import Matriz
 
 
-class MyTestCase(unittest.TestCase):
+class MatrizTestCase(unittest.TestCase):
     def test_imprimir_matriz(self):
 
         matriz = Matriz()
