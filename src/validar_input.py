@@ -24,7 +24,7 @@ def is_elemento_vazio(matriz: Matriz,
     return matriz[linha][coluna] == ' '
 
 
-def input_manager(matriz: Matriz) -> tuple[int, int]:
+def input_manager(matriz: Matriz) -> list[int]:
 
     linha = validar_input("Escolha uma linha entre [1 / 2 / 3]: ") - 1
     coluna = validar_input("Escolha uma coluna entre [1 / 2 / 3]: ") - 1
@@ -35,7 +35,22 @@ def input_manager(matriz: Matriz) -> tuple[int, int]:
         linha = validar_input("Escolha uma linha entre [1 / 2 / 3]: ") - 1
         coluna = validar_input("Escolha uma coluna entre [1 / 2 / 3]: ") - 1
 
-    return linha, coluna
+    return [linha, coluna]
+
+
+def escolher_jogador():
+
+    while True:
+
+        try:
+
+            jogador = input("Escolha uma letra para representa-lo: ").upper().strip()
+
+            if jogador.isalpha():
+                return jogador
+
+        except ValueError:
+            pass
 
 
 if __name__ == '__main__':
