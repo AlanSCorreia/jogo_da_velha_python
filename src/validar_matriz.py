@@ -1,4 +1,4 @@
-from src.matriz import Matriz
+from matriz import Matriz
 type Jogador = str
 
 
