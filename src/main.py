@@ -1,16 +1,13 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from jogo_da_velha import JogoDaVelha
+from validar_input import escolher_jogador
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+if  __name__ == "__main__":
 
+    jogador1 = escolher_jogador()
+    jogador2 = escolher_jogador(letra_invalida=jogador1)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    jogo = JogoDaVelha(jogador1=jogador1,
+                       jogador2=jogador2)
+    
+    jogo.game_loop()
